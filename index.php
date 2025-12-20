@@ -7,7 +7,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-  <h1> Hello word </h1>
+ <!--Main Section--> 
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Aplikasi To Do List</h1>
+        </div>
+      </div>
+    </div>
+  </section>
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
