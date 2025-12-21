@@ -1,0 +1,71 @@
+// script.js
+const BASE_URL = "http://localhost:3000"; // Sesuaikan jika backend pakai port lain
+
+// Login
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch(`${BASE_URL}/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+
+  const data = await res.json();
+  if (data.success) {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("todoApp").style.display = "block";
+    getTodos();
+  } else {
+    alert("Login gagal!");
+  }
+});
+
+// Ambil daftar tugas
+async function getTodos() {
+  const res = await fetch(`${BASE_URL}/todos`);
+  const todos = await res.json();
+  renderTodos(todos);
+}
+
+// Tampilkan tugas
+function renderTodos(todos) {
+  const list = document.getElementById("todoList");
+  list.innerHTML = "";
+  todos.forEach(todo => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${todo.title}</strong><br>${todo.description}<br>Jatuh tempo: ${todo.dueDate}`;
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Hapus";
+    delBtn.onclick = () => deleteTodo(todo.id);
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
+}
+
+// Tambah tugas
+document.getElementById("todoForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const title = document.getElementById("title").value;
+  const description = document.getElementById("description").value;
+  const dueDate = document.getElementById("dueDate").value;
+
+  await fetch(`${BASE_URL}/todos`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ title, description, dueDate })
+  });
+
+  getTodos();
+  e.target.reset();
+});
+
+// Hapus tugas
+async function deleteTodo(id) {
+  await fetch(`${BASE_URL}/todos/${id}`, {
+    method: "DELETE"
+  });
+  getTodos();
+}
