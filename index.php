@@ -20,13 +20,26 @@
              <ion-icon name="add-outline"></ion-icon>
           </a>
 
+          <!--Card dimulai dari sini---> 
+          <?php
+              include("koneksi.php"); 
+
+              $sql="select*from list order by id asc"; 
+              $query=mysqli_query($koneksi, $sql) or die ("Gagal SQL");
+              while($data=mysqli_fetch_array($query)){
+          ?>
           <div class="card mt-2">
             <div class="card-body">
               <div class="row">
                 <div class="col-md-9">
+                  <?php
+                    if($data['status_selesai']==1){
+                  ?>
                   <ion-icon name="checkbox-outline" style="font-size: 20px;position:relative;
                   top:5px;color:green;"></ion-icon>
-                Menyiapkan bahan makanan
+                <?php } ?>
+                <?php echo $data['judul'];
+                ?> 
               </div>
                 <div class="col-md-3">
                   <a href ="#" class="btn btn-success btn-sm">
@@ -38,10 +51,14 @@
                   <a href="#" class="btn btn-danger btn-sm">
                     <ion-icon name="trash-outline"></ion-icon>
                   </a>
-                </div>
+                  </div>
               </div>
             </div>
           </div>
+          <?php
+              }
+          ?>
+          <!--Card sampai disini--> 
         </div>
       </div>
     </div>
