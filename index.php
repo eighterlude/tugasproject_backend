@@ -25,7 +25,7 @@
               <div class="row">
                 <div class="col-md-9">
                   <ion-icon name="checkbox-outline" style="font-size: 20px;position:relative;
-                  top:5px;color:pink;"></ion-icon>
+                  top:5px;color:green;"></ion-icon>
                 Menyiapkan bahan makanan
               </div>
                 <div class="col-md-3">
