@@ -16,7 +16,7 @@
         <div class="col-md-6 offset-md-3">
           <h1 class="text-center mb-4">Aplikasi To Do List</h1>
           
-          <a href="#" class="btn btn-primary btn-sm"> 
+          <a href="frm_tambah.php" class="btn btn-primary btn-sm"> 
              <ion-icon name="add-outline"></ion-icon>
           </a>
 
@@ -33,7 +33,7 @@
               <div class="row">
                 <div class="col-md-9">
                   <?php
-                    if($data['status_selesai']==1){
+                    if($data['status_selesai'] == 1){
                   ?>
                   <ion-icon name="checkbox-outline" style="font-size: 20px;position:relative;
                   top:5px;color:green;"></ion-icon>
