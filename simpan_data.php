@@ -8,4 +8,7 @@
     //simpan data kedatabase 
     $sql="insert into list (judul) values ('$judul')"; 
     mysqli_query($koneksi, $sql) or die ("Gagal SQL"); 
+
+    //pindah halaman ke index
+    header('location:index.php'); 
 ?>
