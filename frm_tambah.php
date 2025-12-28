@@ -7,7 +7,6 @@
     <title>Aplikasi To Do List</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
     <!--Main Section-->
     <section>
