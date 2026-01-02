@@ -21,8 +21,9 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Simpan</button>
-                         <a href="#" class="btn btn-danger">Batal</a>
-                    </form>
+                         <a href="index.php" class="btn btn-danger">Batal</a>
+                    
+                        </form>
                 </div>
             </div>
         </div>
