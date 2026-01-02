@@ -1,9 +1,9 @@
 <?php
-declare(strict_types=1);
+require "config.php";
+require "classes/Auth.php";
 
-session_start();
-session_unset();
-session_destroy();
+$auth = new Auth($pdo);
+$auth->logout();
 
-header("Location: login.php?ok=" . urlencode("Logout berhasil"));
+header("Location: login.php");
 exit;
