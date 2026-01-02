@@ -4,4 +4,7 @@ $user = "root";
 $password = "";
 $database = "db_app_to_do_list"; 
 
-$koneksi=mysqli_connect($host, $user, $password, $database) or die ("Gagal Koneksi"); 
+
+
+
+$koneksi = mysqli_connect($host, $user, $password, $database) or die ("Gagal Koneksi"); 
