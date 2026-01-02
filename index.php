@@ -51,7 +51,7 @@
                     <ion-icon name="pencil-outline"></ion-icon>
                   </a>
                   <!-- tombol hapus --> 
-                  <a href="#" class="btn btn-danger btn-sm">
+                  <a href="hapus.php?id=<?php echo $data['id']?>" class="btn btn-danger btn-sm">
                     <ion-icon name="trash-outline"></ion-icon>
                   </a>
                   </div>
