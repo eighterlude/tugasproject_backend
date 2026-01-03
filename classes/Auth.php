@@ -1,57 +1,35 @@
 <?php
-
-require_once __DIR__ . "/User.php";
-require_once __DIR__ . "/SessionManager.php";
-
 class Auth
 {
-    private User $user;
-    private SessionManager $session;
+    private PDO $db;
 
     public function __construct(PDO $db)
     {
-        $this->user = new User($db);
-        $this->session = new SessionManager();
+        $this->db = $db;
     }
 
-    public function register($username, $email, $password, $confirm, &$err)
+    public function login(string $username, string $password, array &$err): bool
     {
-        $err = [];
+        $stmt = $this->db->prepare(
+            "SELECT id, username, password FROM users WHERE username = ?"
+        );
+        $stmt->execute([$username]);
+        $user = $stmt->fetch();
 
-        if ($password !== $confirm) {
-            $err[] = "Password tidak sama";
+        if (!$user) {
+            $err[] = "Username tidak ditemukan";
             return false;
         }
 
-        return $this->user->create($username, $email, $password);
-    }
-
-    public function login($username, $password, &$err)
-    {
-        $err = [];
-
-        $data = $this->user->find($username);
-
-        if (!$data || !password_verify($password, $data['password_hash'])) {
-            $err[] = "Login gagal";
+        if (!password_verify($password, $user['password'])) {
+            $err[] = "Password salah";
             return false;
         }
 
-        $this->session->login($data['id']);
+        session_start();
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
 
         return true;
-    }
-
-    public function protect()
-    {
-        if (!$this->session->isLogged()) {
-            header("Location: login.php");
-            exit;
-        }
-    }
-
-    public function logout()
-    {
-        $this->session->logout();
     }
 }
