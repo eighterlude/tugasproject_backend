@@ -1,14 +1,23 @@
 <?php
-require_once __DIR__ . '/protect.php';
-$auth = new Auth($pdo);
-$currentId = $auth->getCurrentUserId();
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+require_once __DIR__ . "/config.php";
+
+$currentId = $_SESSION['user_id'];
+?>
+<?php
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - Todo App</title>
+    <title>Dashboard - To-do List App</title>
 </head>
 
 <body>

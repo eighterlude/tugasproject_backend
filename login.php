@@ -7,7 +7,7 @@ $err = [];
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if ($auth->login($_POST['username'], $_POST['password'], $err)) {
-        header("Location: protect.php");
+        header("Location: dashboard.php");
         exit;
     }
 }
@@ -19,13 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <meta charset="UTF-8">
     <title>Login</title>
 
-    <!-- GANTI sesuai lokasi CSS kamu -->
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* fallback kalau CSS belum ada */
         body {
-            font-family: Arial, sans-serif;
+            font-family: Helvetica, sans-serif;
             background: #f4f4f4;
         }
 

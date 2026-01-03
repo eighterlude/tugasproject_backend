@@ -1,6 +1,24 @@
 <?php
-require_once __DIR__ . "/config.php";
-require_once __DIR__ . "/classes/Auth.php";
+require "config.php";
+require "classes/Auth.php";
 
-$auth = new Auth($pdo);
-$auth->requireLogin();
+Auth::requireLogin();
+?>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <h2>Dashboard</h2>
+    <p>Halo, <?= htmlspecialchars($_SESSION['username']) ?></p>
+
+    <a href="logout.php">Logout</a>
+
+</body>
+
+</html>

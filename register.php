@@ -11,14 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if ($username === '' || $password === '') {
         $err[] = "Username dan password wajib diisi";
     } else {
-        // cek username sudah ada atau belum
         $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
         $stmt->execute([$username]);
 
         if ($stmt->fetch()) {
             $err[] = "Username sudah terdaftar";
         } else {
-            // simpan user baru
             $hash = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $pdo->prepare(
                 "INSERT INTO users (username, password) VALUES (?, ?)"

@@ -32,4 +32,13 @@ class Auth
 
         return true;
     }
+    public static function requireLogin(): void
+    {
+        session_start();
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: login.php");
+            exit;
+        }
+    }
+
 }
