@@ -42,14 +42,17 @@
                 ?> 
               </div>
                 <div class="col-md-3">
+
                   <!-- tombol selesai-->
                   <a href ="set_selesai.php?id=<?php echo $data['id']?>" class="btn btn-success btn-sm">
                     <ion-icon name="checkmark-outline"></ion-icon>
                   </a>
+
                   <!-- tombol edit -->
-                  <a href="#" class="btn btn-warning btn-sm">
+                  <a href="frm_edit.php?id=<?php echo $data['id'] ?>" class="btn btn-warning btn-sm">
                     <ion-icon name="pencil-outline"></ion-icon>
                   </a>
+
                   <!-- tombol hapus --> 
                   <a href="hapus.php?id=<?php echo $data['id']?>" class="btn btn-danger btn-sm">
                     <ion-icon name="trash-outline"></ion-icon>
