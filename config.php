@@ -1,6 +1,6 @@
 <?php
 $DB_HOST = "localhost";
-$DB_NAME = "todo_app";
+$DB_NAME = "db_app_to_do_list";
 $DB_USER = "root";
 $DB_PASS = "";
 
