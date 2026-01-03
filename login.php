@@ -7,7 +7,7 @@ $err = [];
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if ($auth->login($_POST['username'], $_POST['password'], $err)) {
-        header("Location: protected.php");
+        header("Location: protect.php");
         exit;
     }
 }
