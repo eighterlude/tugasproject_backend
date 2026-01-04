@@ -212,4 +212,8 @@ Berikut adalah hasil pengembangan yang telah dikerjakan dalam proyek aplikasi To
 3. Akses di browser:
    - `http://localhost/tugasproject_backend/`
    - atau sesuaikan nama foldernya
+  
+---
+LAMPIRAN
+![WhatsApp Image 2026-01-04 at 21 30 11](https://github.com/user-attachments/assets/7c2c59a3-d1bd-4a7f-95d9-8009d6cb4aa1)
 
