@@ -33,3 +33,41 @@ Fitur utama mencakup autentikasi user (register/login/logout), proteksi halaman,
 - HTML, CSS, JavaScript
 - Git & GitHub
 - Visual Studio Code
+
+---
+
+
+## Hasil Pengembangan (Fitur CRUD)
+Berikut adalah fitur CRUD yang telah diimplementasikan pada aplikasi To Do List:
+
+### 1. Create (Tambah Data)
+Pengguna dapat menambahkan tugas baru melalui form input.  
+Data yang dimasukkan akan disimpan ke dalam database MySQL.
+
+**Field utama:**
+- Judul Tugas
+- Deskripsi
+- Status (Belum Selesai / Selesai)
+
+### 2. Read (Tampilkan Data)
+Aplikasi menampilkan seluruh daftar tugas yang tersimpan di database dalam bentuk tabel.  
+Setiap tugas menampilkan:
+- Judul tugas
+- Deskripsi
+- Status
+- Aksi (Edit & Hapus)
+
+### 3. Update (Ubah Data)
+Pengguna dapat mengubah data tugas yang sudah ada, seperti:
+- Mengedit judul atau deskripsi tugas
+- Mengubah status tugas menjadi selesai atau belum selesai
+
+Perubahan data akan langsung diperbarui di database.
+
+### 4. Delete (Hapus Data)
+Pengguna dapat menghapus tugas yang tidak diperlukan lagi.  
+Data yang dihapus akan dihilangkan secara permanen dari database.
+
+---
+
+
