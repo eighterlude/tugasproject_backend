@@ -215,5 +215,15 @@ Berikut adalah hasil pengembangan yang telah dikerjakan dalam proyek aplikasi To
   
 ---
 LAMPIRAN
-![WhatsApp Image 2026-01-04 at 21 30 11](https://github.com/user-attachments/assets/7c2c59a3-d1bd-4a7f-95d9-8009d6cb4aa1)
+![WhatsApp Image 2026-01-04 at 21 32 24](https://github.com/user-attachments/assets/e8933d9f-e62b-4425-bd4e-d27f20fe670e)
+![WhatsApp Image 2026-01-04 at 21 32 51](https://github.com/user-attachments/assets/76fecf42-3071-4014-8571-f413a891a8e3)
+![WhatsApp Image 2026-01-04 at 21 32 16](https://github.com/user-attachments/assets/b690b6cf-d219-4192-9dbd-830b1b45445c)
+![WhatsApp Image 2026-01-04 at 21 31 33](https://github.com/user-attachments/assets/5e3c6039-bdb1-435d-abe3-8f18ca6c0414)
+![WhatsApp Image 2026-01-04 at 21 31 32](https://github.com/user-attachments/assets/bc6d40d2-3ddc-47f1-89c4-89e49a2fff69)
+![WhatsApp Image 2026-01-04 at 21 30 11](https://github.com/user-attachments/assets/ec7aa828-9a68-4eff-b2fa-d3be967f51cb)
+![WhatsApp Image 2026-01-04 at 21 29 59](https://github.com/user-attachments/assets/0f18d798-957a-46ab-9804-e31bd2e5b53c)
+
+
+
+
 
