@@ -5,29 +5,17 @@ Aplikasi web sederhana untuk mengelola daftar tugas (to-do list) berbasis **PHP 
 Fitur utama mencakup autentikasi user (register/login/logout), proteksi halaman, serta CRUD data tugas (tambah, edit, hapus, set selesai).
 
 ---
-## Daftar Anggota (Tim)
+## Daftar Anggota
 
 1. Nama : Rosaria Alexandria
    NIM: `240030365`
    GitHub: **@eighterlude**  
-   Peran:
-   - Mengembangkan modul autentikasi pengguna (register & login)
-   - Implementasi hashing password untuk keamanan akun
-   - Manajemen session (login, logout, session timeout)
-   - Proteksi halaman agar hanya dapat diakses oleh user yang sudah login
-   - Final check integrasi antar modul
-   - Penyusunan dan finalisasi dokumentasi proyek (README.md)
-     contentReference[oaicite:1]{index=1}
-
-3. Nama : Agung Deva Intan Pradnyadewi
+2. Nama : Agung Deva Intan Pradnyadewi
    NIM: `240030315`
    GitHub: **@intanpradnya**  
-   Peran:  :contentReference[oaicite:2]{index=2} (JANGAN DIHAPUS)
-
-5. Nama : Habbibah Alya Nabila
+3. Nama : Habbibah Alya Nabila
    NIM: `240030444`
    GitHub: **@alyanabila-ops**  
-   Peran: :contentReference[oaicite:3]{index=3} (JANGAN DIHAPUS)
 
 ---
 
@@ -224,3 +212,4 @@ Berikut adalah hasil pengembangan yang telah dikerjakan dalam proyek aplikasi To
 3. Akses di browser:
    - `http://localhost/tugasproject_backend/`
    - atau sesuaikan nama foldernya
+
